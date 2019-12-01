@@ -1,49 +1,38 @@
-# Python program for Bellman-Ford's single source 
-# shortest path algorithm. 
-
 from collections import defaultdict 
 
-# Class to represent a graph 
+# classe que representa o grafo
 class Graph: 
 
-	def __init__(self, vertices): 
-		self.V = vertices # No. of vertices 
-		self.graph = [] # default dictionary to store graph 
+	def __init__(self, vertices):
+		# numero de vertices 
+		self.V = vertices
+		# grafo vazio
+		self.graph = []
 
-	# function to add an edge to graph 
+	# adicionar uma aresta ao grafo
 	def addEdge(self, u, v, w): 
 		self.graph.append([u, v, w]) 
-	
-	# The main function that finds shortest distances from src to 
-	# all other vertices using Bellman-Ford algorithm. The function 
-	# also detects negative weight cycle 
+
 	def BellmanFord(self, src, pont): 
 
-		# Step 1: Initialize distances from src to all other vertices 
-		# as INFINITE 
-		dist = [float("Inf")] * self.V 
+		# inicialize distancias de src para todos os outros vertices como INFINITO
+		dist = [float("Infinity")] * self.V 
 		dist[src] = 0
 
-
-		# Step 2: Relax all edges |V| - 1 times. A simple shortest 
-		# path from src to any other vertex can have at-most |V| - 1 
-		# edges 
-		for i in range(self.V - 1): 
-			# Update dist value and parent index of the adjacent vertices of 
-			# the picked vertex. Consider only those vertices which are still in 
-			# queue 
+		# as vertice pode so pode ter no maximo V - 1 arestas
+		for i in range(self.V - 1):
+			# Atualiza a distancia das vertices adjacentes do vertice selecionado, 
+			# garantindo a distacia mais curta
 			for u, v, w in self.graph: 
-				if dist[u] != float("Inf") and dist[u] + w < dist[v]: 
+				if dist[u] != float("Infinity") and dist[u] + w < dist[v]: 
 					dist[v] = dist[u] + w 
-		# Step 3: check for negative-weight cycles. The above step 
-		# guarantees shortest distances if graph doesn't contain 
-		# negative weight cycle. If we get a shorter path, then there 
-		# is a cycle.
+
+		# verifica os ciclos de peso negativo
 		for u, v, w in self.graph: 
-			if dist[u] != float("Inf") and dist[u] + w < dist[v]: 
+			if dist[u] != float("Infinity") and dist[u] + w < dist[v]: 
 					print("Impossible")
   
-		if dist[pont] == float("Inf") :
+		if dist[pont] == float("Infinity") :
 				print("Impossible")
 		else:
 				print(dist[pont])
@@ -53,26 +42,19 @@ m = 1
 q = 1
 
 while(n != 0 and m != 0 and q != 0):
-	n = int(input())
-	m = int(input())
-	q = int(input())
+	n, m, q = map(int, input().split())
 	g = Graph(n) 
 	i = 0
-	if(n == 0 and m == 0 and q == 0):
+	if(n == m == q == 0):
 		break
 	else:
-		while(i<m):
-			u = int(input())
-			v = int(input())
-			w = int(input())
-			g.addEdge(u,v,w)
+		while(i < m):
+			u, v, w = map(int, input().split())
+			g.addEdge(u, v, w)
 			i+=1
 		j=0
 		while(j<q):
-			a = int(input())
-			b = int(input())
-			g.BellmanFord(a,b)
+			a, b = map(int, input().split())
+			g.BellmanFord(a, b)
 			j+=1
 		print("\n")
-
-# This code is contributed by Neelam Yadav 
