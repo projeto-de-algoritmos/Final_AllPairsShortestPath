@@ -1,45 +1,47 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# Kattis - All Pairs Shortest Path
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 6 <br>
+**Conteúdo da Disciplina**: Grafos <br>
 
 ## Alunos
-|Matrícula | Aluno |
-| -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+|Matrícula | Aluno | GitHub |
+| -- | -- | -- |
+| 16/0010195 | João Vítor Morandi | [@joaovitorml](https://github.com/joaovitorml) |
+| 160006210 | Francisco Heronildo | [@FranciscoHeronildo](https://github.com/FranciscoHeronildo) |
 
-## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+## Sobre
+Problema encontrado no [Kattis Problems](https://open.kattis.com/problems/allpairspath) relacionado a grafos com o intuito de fixar o conteúdo ministrado na disciplina
 
 ## Screenshots
+
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
-## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+## Instalação
 
-## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+**Linguagem**: Python 3 <br>
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+## Uso
 
+Clone o Repositório: `$ git clone https://github.com/projeto-de-algoritmos/Final_AllPairsShortestPath.git` </br>
+Acesse o diretório: `$ cd Final_AllPairsShortestPath.git` </br>
+Execute: `$ python3 kattis-All_Pairs_Shortest_Path.py` </br>
 
+## Outros
 
+### Questão
 
+<h1><center>All Pairs Shortest Path</center></h1>
+
+---
+
+<h2>Input</h2>
+
+<p>The input consists of several test cases. Each test case starts with a line with three non-negative integers, 1≤𝑛≤150, 0≤𝑚≤5000 and 1≤𝑞≤1000, separated by single single spaces, where 𝑛 is the numbers of nodes in the graph, 𝑚 the number of edges and 𝑞 the number of queries. Nodes are numbered from 0 to 𝑛−1. Then follow 𝑚 lines, each line consisting of three (space-separated) integers 𝑢, 𝑣 and 𝑤 indicating that there is an edge from 𝑢 to 𝑣 in the graph with weight −1000≤𝑤≤1000. Then follow 𝑞 lines of queries, each consisting of two node numbers 𝑢 and 𝑣 (separated by a space), asking for the minimum distance from node 𝑢 to node 𝑣. Input will be terminated by a line containing 0 0 0, this line should not be processed.</p>
+
+<h2>Output</h2>
+
+<p>For each query, output a single line containing the minimum distance from node 𝑢 to 𝑣, or the word Impossible if there is no path from 𝑢 to 𝑣, or -Infinity if there are arbitrarily short paths from 𝑢 to 𝑣. Print a blank line after each test case.</p>
+
+| Sample Input 1 | Sample Output 1 |
+| :-- | :-- |
+| 4 3 4 </br> 0 1 2 </br> 1 2 2 </br> 3 3 1 </br> 0 2 </br> 1 2 </br> 3 0 </br> 3 3 </br> 2 1 2 </br> 0 1 100 </br> 0 1 </br> 1 0 </br> 0 0 0 | 4 </br> 2 </br> Impossible </br> 0 </br> </br> 100 </br> Impossible |
