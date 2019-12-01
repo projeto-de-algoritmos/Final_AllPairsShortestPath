@@ -4,12 +4,14 @@
 **Conteúdo da Disciplina**: Grafos <br>
 
 ## Alunos
+
 |Matrícula | Aluno | GitHub |
 | -- | -- | -- |
 | 16/0010195 | João Vítor Morandi | [@joaovitorml](https://github.com/joaovitorml) |
-| 160006210 | Francisco Heronildo | [@FranciscoHeronildo](https://github.com/FranciscoHeronildo) |
+| 16/0006210 | Francisco Heronildo | [@FranciscoHeronildo](https://github.com/FranciscoHeronildo) |
 
 ## Sobre
+
 Problema encontrado no [Kattis Problems](https://open.kattis.com/problems/allpairspath) relacionado a grafos com o intuito de fixar o conteúdo ministrado na disciplina
 
 ## Screenshots
@@ -18,7 +20,7 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação
 
-**Linguagem**: Python 3 <br>
+**Linguagem**: Python <br>
 
 ## Uso
 
@@ -30,7 +32,7 @@ Execute: `$ python3 kattis-All_Pairs_Shortest_Path.py` </br>
 
 ### Questão
 
-<h1><center>All Pairs Shortest Path</center></h1>
+<h1>All Pairs Shortest Path</h1>
 
 ---
 
